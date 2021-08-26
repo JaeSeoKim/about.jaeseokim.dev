@@ -34,7 +34,7 @@
     // source of truth from system
     // set default light-mode
     setClassOnDocumentBody(classNameLight)
-    localStorage.setItem(storageKey, mql.matches)
+    localStorage.setItem(storageKey, classNameLight)
   } else {
     // source of truth from document.body
     var isDarkMode = document.body.classList.contains(classNameDark)
