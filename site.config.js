@@ -20,7 +20,7 @@ module.exports = {
   github: 'JaeSeoKim',
   facebook: 'devjaeseo',
   email: 'devjaeseo@gmail.com',
-  blog: 'devjaeseo.dev',
+  blog: 'https://jaeseokim.dev/',
 
   // default notion icon and cover images for site-wide consistency (optional)
   // page-specific values will override these site-wide defaults
