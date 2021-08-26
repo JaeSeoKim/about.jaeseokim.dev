@@ -1,9 +1,16 @@
 import * as React from 'react'
-import { FaTwitter, FaGithub, FaLinkedin } from 'react-icons/fa'
+import {
+  FaTwitter,
+  FaGithub,
+  FaLinkedin,
+  FaFacebook,
+  FaBlogger
+} from 'react-icons/fa'
 import { IoSunnyOutline, IoMoonSharp } from 'react-icons/io5'
 import * as config from 'lib/config'
 
 import styles from './styles.module.css'
+import { RiMailFill } from 'react-icons/ri'
 
 // TODO: merge the data and icons from PageSocial with the social links in Footer
 
@@ -74,6 +81,42 @@ export const Footer: React.FC<{
             rel='noopener noreferrer'
           >
             <FaLinkedin />
+          </a>
+        )}
+
+        {config.facebook && (
+          <a
+            className={styles.facebook}
+            href={`https://www.facebook.com/${config.facebook}`}
+            title={`Facebook @${config.author}`}
+            target='_blank'
+            rel='noopener noreferrer'
+          >
+            <FaFacebook />
+          </a>
+        )}
+
+        {config.email && (
+          <a
+            className={styles.email}
+            href={`mailto:${config.email}`}
+            title={`Email <${config.author}>`}
+            target='_blank'
+            rel='noopener noreferrer'
+          >
+            <RiMailFill />
+          </a>
+        )}
+
+        {config.blog && (
+          <a
+            className={styles.blog}
+            href={`${config.blog}`}
+            title={`${config.author}'s blog`}
+            target='_blank'
+            rel='noopener noreferrer'
+          >
+            <FaBlogger />
           </a>
         )}
       </div>

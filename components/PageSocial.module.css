@@ -73,10 +73,10 @@
 }
 
 .facebook .actionBgPane {
-  background: #3b5998;
+  background: #1877f2;
 }
 .facebook:hover {
-  border-color: #3b5998;
+  border-color: #1877f2;
 }
 
 .twitter .actionBgPane {
@@ -112,6 +112,13 @@
 }
 .email:hover {
   border-color: #777;
+}
+
+.blog .actionBgPane {
+  background: #f57d00;
+}
+.blog:hover {
+  border-color: #f57d00;
 }
 
 @media only screen and (max-width: 768px) {

@@ -31,7 +31,7 @@ export interface Site extends Model {
 
   // settings
   html?: string
-  fontFamily?: string
+  fontFamily?: string[]
   darkMode?: boolean
   previewImages?: boolean
 

@@ -46,6 +46,9 @@ export const description: string = getSiteConfig('description', 'Notion Blog')
 export const twitter: string | null = getSiteConfig('twitter', null)
 export const github: string | null = getSiteConfig('github', null)
 export const linkedin: string | null = getSiteConfig('linkedin', null)
+export const facebook: string | null = getSiteConfig('facebook', null)
+export const email: string | null = getSiteConfig('email', null)
+export const blog: string | null = getSiteConfig('blog', null)
 
 export const socialImageTitle: string | null = getSiteConfig(
   'socialImageTitle',
@@ -85,6 +88,8 @@ export const isPreviewImageSupportEnabled: boolean = getSiteConfig(
   'isPreviewImageSupportEnabled',
   false
 )
+
+export const fontFamily: string[] | null = getSiteConfig('fontFamily', null)
 
 export const isDev =
   process.env.NODE_ENV === 'development' || !process.env.NODE_ENV
