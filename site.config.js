@@ -1,6 +1,6 @@
 module.exports = {
   // where it all starts -- the site's root Notion page (required)
-  rootNotionPageId: 'b1c4915776c9491494ae78d9e08c519a',
+  rootNotionPageId: 'ae9220e5cd694573987b4d2f25a115c3',
 
   // if you want to restrict pages to a single notion workspace (optional)
   // (this should be a Notion ID; see the docs for how to extract this)
@@ -50,5 +50,10 @@ module.exports = {
   //   '/foo': '067dd719a912471ea9a3ac10710e7fdf',
   //   '/bar': '0be6efce9daf42688f65c76b89f8eb27'
   // }
-  pageUrlOverrides: null
+  pageUrlOverrides: {
+    '/skill': 'a44e4d6362ba4445b5dcda5d597511e6',
+    '/resume': 'b1c4915776c9491494ae78d9e08c519a',
+    '/portfolio': 'defed3c507da402d84c6bbf3c60b558c',
+    '/projects': 'b5a09de9d7bd4929a7df153463ecccbc'
+  }
 }

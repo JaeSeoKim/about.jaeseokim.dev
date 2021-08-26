@@ -11,13 +11,15 @@
   background-color: #282c34;
   border-color: rgba(55, 65, 81, 1);
 }
-.notion code {
+
+.notion-code .notion code {
   color: rgba(31, 41, 55, 1);
   border: 0 none !important;
   box-shadow: none !important;
   background: none !important;
   padding: 0 !important;
 }
+
 .dark-mode .notion code {
   color: rgba(229, 231, 235, 1);
 }
