@@ -31,8 +31,8 @@
     // source of truth from localStorage
     setClassOnDocumentBody(localStorageTheme)
   } else {
-    // set default light-mode
-    setClassOnDocumentBody(classNameLight)
-    localStorage.setItem(storageKey, classNameLight)
+    // source of truth from document.body
+    setClassOnDocumentBody(false)
+    localStorage.setItem(storageKey, JSON.stringify(false))
   }
 })()
