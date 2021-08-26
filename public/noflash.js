@@ -32,7 +32,8 @@
     setClassOnDocumentBody(localStorageTheme)
   } else if (supportsColorSchemeQuery) {
     // source of truth from system
-    setClassOnDocumentBody(mql.matches)
+    // set default light-mode
+    setClassOnDocumentBody(classNameLight)
     localStorage.setItem(storageKey, mql.matches)
   } else {
     // source of truth from document.body
