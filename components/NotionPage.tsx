@@ -80,7 +80,11 @@ export const NotionPage: React.FC<types.PageProps> = ({
     return <Page404 site={site} pageId={pageId} error={error} />
   }
 
-  const title = getBlockTitle(block, recordMap) || site.name
+  const isIndexPage = pageId === site.rootNotionPageId
+
+  const title = isIndexPage
+    ? site.name
+    : `${getBlockTitle(block, recordMap)} | ${site.name}` || site.name
 
   console.log('notion page', {
     isDev: config.isDev,
@@ -107,6 +111,7 @@ export const NotionPage: React.FC<types.PageProps> = ({
   //   parsePageId(block.id) === parsePageId(site.rootNotionPageId)
   const isBlogPost =
     block.type === 'page' && block.parent_table === 'collection'
+
   const showTableOfContents = !!isBlogPost
   const minTableOfContentsItems = 3
 
@@ -132,12 +137,9 @@ export const NotionPage: React.FC<types.PageProps> = ({
         theme={darkMode.value ? 'photon-dark' : 'github-light'}
       />
     )
+  }
 
-    const tweet = getPageTweet(block, recordMap)
-    if (tweet) {
-      pageAside = <PageActions tweet={tweet} />
-    }
-  } else {
+  if (!isBlogPost) {
     pageAside = <PageSocial />
   }
 
@@ -198,10 +200,7 @@ export const NotionPage: React.FC<types.PageProps> = ({
       {isLiteMode && <BodyClassName className='notion-lite' />}
 
       <NotionRenderer
-        bodyClassName={cs(
-          styles.notion,
-          pageId === site.rootNotionPageId && 'index-page'
-        )}
+        bodyClassName={cs(styles.notion, isIndexPage && 'index-page')}
         components={{
           pageLink: ({
             href,

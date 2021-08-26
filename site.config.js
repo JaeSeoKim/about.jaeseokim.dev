@@ -12,8 +12,8 @@ module.exports = {
   author: 'JaeSeoKim',
 
   // open graph metadata (optional)
-  description: '동료학습을 통해 성장하는 개발자 김재서입니다.',
-  socialImageTitle: '동료학습을 통해 성장하는',
+  description: '동료학습을 통해 함께 성장하는 개발자 김재서입니다! 👋',
+  socialImageTitle: '동료학습을 함께 통해 성장하는',
   socialImageSubtitle: '개발자 김재서입니다! 👋',
 
   // social usernames (optional)

@@ -7,7 +7,7 @@
  */
 
 .notion {
-  --notion-max-width: 720px;
+  --notion-max-width: 920px;
   --notion-header-height: 54px;
 }
 
@@ -17,7 +17,7 @@
 }
 
 .index-page {
-  --notion-max-width: 720px;
+  --notion-max-width: 920px;
 }
 
 .notion-text {
