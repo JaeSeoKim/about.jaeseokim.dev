@@ -1,3 +1,3 @@
-# JaeSeoKim's Resume
+# about.jaeseokim.dev
 
 notion <-> about.jaeseokim.dev
