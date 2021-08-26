@@ -1,7 +1,7 @@
 import React from 'react'
 import Document, { Html, Head, Main, NextScript } from 'next/document'
 import { IconContext } from 'react-icons'
-
+import * as config from '../lib/config'
 export default class MyDocument extends Document {
   render() {
     return (
@@ -52,6 +52,26 @@ export default class MyDocument extends Document {
             />
 
             <link rel='manifest' href='/manifest.json' />
+
+            {config.googleAnalytics && (
+              <>
+                <script
+                  async
+                  src={`https://www.googletagmanager.com/gtag/js?id=${config.googleAnalytics}`}
+                ></script>
+                <script
+                  dangerouslySetInnerHTML={{
+                    __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', '${config.googleAnalytics}');
+              `
+                  }}
+                ></script>
+              </>
+            )}
           </Head>
 
           <body>

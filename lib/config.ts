@@ -212,3 +212,8 @@ function invertPageUrlOverrides(
     }
   }, {})
 }
+
+export const googleAnalytics: string | null = getSiteConfig(
+  'googleAnalytics',
+  null
+)
