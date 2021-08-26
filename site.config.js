@@ -28,6 +28,8 @@ module.exports = {
   defaultPageCover: null,
   defaultPageCoverPosition: 0.5,
 
+  defaultSocailImage: 'social-image.png',
+
   fontFamily: ['Do Hyeon'],
 
   // image CDN host to proxy all image requests through (optional)

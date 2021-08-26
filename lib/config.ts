@@ -73,6 +73,11 @@ export const defaultPageCoverPosition: number = getSiteConfig(
   0.5
 )
 
+export const defaultSocailImage: number = getSiteConfig(
+  'defaultSocailImage',
+  null
+)
+
 // Optional utteranc.es comments via GitHub issue comments
 export const utterancesGitHubRepo: string | null = getSiteConfig(
   'utterancesGitHubRepo',

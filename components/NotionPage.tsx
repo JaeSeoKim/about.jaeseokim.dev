@@ -19,7 +19,6 @@ import { getBlockTitle } from 'notion-utils'
 import { mapPageUrl, getCanonicalPageUrl } from 'lib/map-page-url'
 import { mapNotionImageUrl } from 'lib/map-image-url'
 import { getPageDescription } from 'lib/get-page-description'
-import { getPageTweet } from 'lib/get-page-tweet'
 import { searchNotion } from 'lib/search-notion'
 import * as types from 'lib/types'
 import * as config from 'lib/config'
@@ -29,7 +28,6 @@ import { CustomFont } from './CustomFont'
 import { Loading } from './Loading'
 import { Page404 } from './Page404'
 import { PageHead } from './PageHead'
-import { PageActions } from './PageActions'
 import { Footer } from './Footer'
 import { PageSocial } from './PageSocial'
 import { ReactUtterances } from './ReactUtterances'
@@ -115,10 +113,9 @@ export const NotionPage: React.FC<types.PageProps> = ({
   const showTableOfContents = !!isBlogPost
   const minTableOfContentsItems = 3
 
-  const socialImage = mapNotionImageUrl(
-    (block as PageBlock).format?.page_cover || config.defaultPageCover,
-    block
-  )
+  const socialImage =
+    config.defaultSocailImage &&
+    `https://${config.domain}/${config.defaultSocailImage}`
 
   const socialDescription =
     getPageDescription(block, recordMap) ?? config.description
