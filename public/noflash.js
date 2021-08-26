@@ -30,14 +30,9 @@
   if (localStorageExists) {
     // source of truth from localStorage
     setClassOnDocumentBody(localStorageTheme)
-  } else if (supportsColorSchemeQuery) {
-    // source of truth from system
+  } else {
     // set default light-mode
     setClassOnDocumentBody(classNameLight)
     localStorage.setItem(storageKey, classNameLight)
-  } else {
-    // source of truth from document.body
-    var isDarkMode = document.body.classList.contains(classNameDark)
-    localStorage.setItem(storageKey, JSON.stringify(isDarkMode))
   }
 })()
