@@ -6,7 +6,7 @@ export default class MyDocument extends Document {
   render() {
     return (
       <IconContext.Provider value={{ style: { verticalAlign: 'middle' } }}>
-        <Html lang='en'>
+        <Html lang='ko'>
           <Head>
             <link rel='shortcut icon' href='/favicon.ico' type='image/x-icon' />
             <link rel='apple-touch-icon' href='/apple-touch-icon.png' />
