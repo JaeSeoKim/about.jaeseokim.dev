@@ -122,18 +122,16 @@ export const NotionPage: React.FC<types.PageProps> = ({
   let pageAside: React.ReactChild = null
 
   // only display comments and page actions on blog post pages
-  if (isBlogPost) {
-    if (config.utterancesGitHubRepo) {
-      comments = (
-        <ReactUtterances
-          repo={config.utterancesGitHubRepo}
-          issueMap='issue-term'
-          issueTerm='title'
-          label='💬 comment'
-          theme={darkMode.value ? 'photon-dark' : 'github-light'}
-        />
-      )
-    }
+  if (config.utterancesGitHubRepo) {
+    comments = (
+      <ReactUtterances
+        repo={config.utterancesGitHubRepo}
+        issueMap='issue-term'
+        issueTerm='title'
+        label='💬 comment'
+        theme={darkMode.value ? 'photon-dark' : 'github-light'}
+      />
+    )
 
     const tweet = getPageTweet(block, recordMap)
     if (tweet) {
