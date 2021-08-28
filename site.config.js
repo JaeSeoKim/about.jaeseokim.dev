@@ -30,7 +30,7 @@ module.exports = {
 
   defaultSocailImage: 'social-image.png',
 
-  fontFamily: ['Do Hyeon'],
+  fontFamily: null,
 
   // image CDN host to proxy all image requests through (optional)
   // NOTE: this requires you to set up an external image proxy
