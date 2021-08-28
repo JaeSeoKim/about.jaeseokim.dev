@@ -159,7 +159,7 @@
 }
 
 .notion-table {
-  width: inherit;
+  width: inherit !important;
   height: inherit;
 }
 
