@@ -301,3 +301,7 @@
   border-image: linear-gradient(90.68deg, #83eaf1 0.26%, #63a4ff 102.37%);
   border-image-slice: 1;
 }
+
+.notion-collection-card .notion-property-multi_select-item {
+  margin: 0 6px 6px 0;
+}
