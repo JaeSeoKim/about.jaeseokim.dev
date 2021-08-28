@@ -1,4 +1,4 @@
-import * as React from 'react'
+import React from 'react'
 import Head from 'next/head'
 import Link from 'next/link'
 import dynamic from 'next/dynamic'
@@ -7,12 +7,11 @@ import { useRouter } from 'next/router'
 import { useSearchParam } from 'react-use'
 import BodyClassName from 'react-body-classname'
 import useDarkMode from 'use-dark-mode'
-import { PageBlock } from 'notion-types'
 
 import { Tweet, TwitterContextProvider } from 'react-static-tweets'
 
 // core notion renderer
-import { NotionRenderer, Code, Collection, CollectionRow } from 'react-notion-x'
+import { NotionRenderer, Code } from 'react-notion-x'
 
 // utils
 import { getBlockTitle } from 'notion-utils'
@@ -46,6 +45,16 @@ const Equation = dynamic(() =>
 
 const Modal = dynamic(
   () => import('react-notion-x').then((notion) => notion.Modal),
+  { ssr: false }
+)
+
+const Collection = dynamic(
+  () => import('react-notion-x').then((notion) => notion.Collection),
+  { ssr: false }
+)
+
+const CollectionRow = dynamic(
+  () => import('react-notion-x').then((notion) => notion.CollectionRow),
   { ssr: false }
 )
 
