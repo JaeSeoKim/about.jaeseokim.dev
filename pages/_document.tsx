@@ -68,8 +68,6 @@ export default class MyDocument extends Document {
 
                       gtag('config', '${config.googleAnalytics}');
                     `
-                      .split(' ')
-                      .join('')
                   }}
                 ></script>
               </>
