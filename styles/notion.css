@@ -158,13 +158,18 @@
   text-align: center;
 }
 
+.notion-table {
+  width: inherit;
+  height: inherit;
+}
+
 .notion-collection-column-title {
-  display: none !important;
+  /* display: none !important; */
 }
 
 .notion-collection-row-property .notion-property {
-  display: flex;
-  justify-content: center;
+  /* display: flex;
+  justify-content: center; */
 }
 
 .notion-collection-row-value {
@@ -277,7 +282,7 @@
 
 /* if you don't want rounded page images, remove this */
 .notion-page-icon-wrapper img.notion-page-icon {
-  border-radius: 50%;
+  /* border-radius: 50%; */
   box-shadow: 0 8px 40px 0 rgb(0 0 0 / 21%);
 }
 
