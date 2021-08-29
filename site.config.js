@@ -56,7 +56,7 @@ module.exports = {
     '/skill': 'a44e4d6362ba4445b5dcda5d597511e6',
     '/resume': 'b1c4915776c9491494ae78d9e08c519a',
     '/portfolio': 'defed3c507da402d84c6bbf3c60b558c',
-    '/projects': 'b5a09de9d7bd4929a7df153463ecccbc'
+    '/database': 'b5a09de9d7bd4929a7df153463ecccbc'
   },
 
   googleAnalytics: 'G-FQMCNLKP4T'
