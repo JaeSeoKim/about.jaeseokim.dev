@@ -8,10 +8,8 @@ import { useSearchParam } from 'react-use'
 import BodyClassName from 'react-body-classname'
 import useDarkMode from 'use-dark-mode'
 
-import { Tweet, TwitterContextProvider } from 'react-static-tweets'
-
 // core notion renderer
-import { NotionRenderer, Code } from 'react-notion-x'
+import { NotionRenderer, Code, Collection, CollectionRow } from 'react-notion-x'
 
 // utils
 import { getBlockTitle } from 'notion-utils'
@@ -39,22 +37,8 @@ const Equation = dynamic(() =>
   import('react-notion-x').then((notion) => notion.Equation)
 )
 
-// we're now using a much lighter-weight tweet renderer react-static-tweets
-// instead of the official iframe-based embed widget from twitter
-// const Tweet = dynamic(() => import('react-tweet-embed'))
-
 const Modal = dynamic(
   () => import('react-notion-x').then((notion) => notion.Modal),
-  { ssr: false }
-)
-
-const Collection = dynamic(
-  () => import('react-notion-x').then((notion) => notion.Collection),
-  { ssr: false }
-)
-
-const CollectionRow = dynamic(
-  () => import('react-notion-x').then((notion) => notion.CollectionRow),
   { ssr: false }
 )
 
@@ -150,15 +134,7 @@ export const NotionPage: React.FC<types.PageProps> = ({
   }
 
   return (
-    <TwitterContextProvider
-      value={{
-        tweetAstMap: (recordMap as any).tweetAstMap || {},
-        swrOptions: {
-          fetcher: (id) =>
-            fetch(`/api/get-tweet-ast/${id}`).then((r) => r.json())
-        }
-      }}
-    >
+    <>
       <PageHead site={site} />
 
       <Head>
@@ -235,7 +211,6 @@ export const NotionPage: React.FC<types.PageProps> = ({
           code: Code,
           collection: Collection,
           collectionRow: CollectionRow,
-          tweet: Tweet,
           modal: Modal,
           pdf: Pdf,
           equation: Equation
@@ -263,6 +238,6 @@ export const NotionPage: React.FC<types.PageProps> = ({
           />
         }
       />
-    </TwitterContextProvider>
+    </>
   )
 }
