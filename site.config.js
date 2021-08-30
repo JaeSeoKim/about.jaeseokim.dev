@@ -59,5 +59,6 @@ module.exports = {
     '/database': 'b5a09de9d7bd4929a7df153463ecccbc'
   },
 
+  includeNotionIdInUrls: true,
   googleAnalytics: 'G-FQMCNLKP4T'
 }
