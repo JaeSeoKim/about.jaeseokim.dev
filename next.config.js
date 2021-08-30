@@ -8,7 +8,4 @@ module.exports = withBundleAnalyzer({
   images: {
     domains: ['www.notion.so']
   },
-  future: {
-    webpack5: true
-  }
 })
