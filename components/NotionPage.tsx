@@ -31,7 +31,27 @@ import { ReactUtterances } from './ReactUtterances'
 
 import styles from './styles.module.css'
 
-const Pdf = dynamic(() => import('react-notion-x').then((notion) => notion.Pdf))
+// const Code = dynamic(() =>
+//   import('react-notion-x').then((notion) => notion.Code)
+// )
+//
+// const Collection = dynamic(() =>
+//   import('react-notion-x').then((notion) => notion.Collection)
+// )
+//
+// const CollectionRow = dynamic(
+//   () => import('react-notion-x').then((notion) => notion.CollectionRow),
+//   {
+//     ssr: false
+//   }
+// )
+
+// TODO: PDF support via "react-pdf" package has numerous troubles building
+// with next.js
+// const Pdf = dynamic(
+//   () => import('react-notion-x').then((notion) => notion.Pdf),
+//   { ssr: false }
+// )
 
 const Equation = dynamic(() =>
   import('react-notion-x').then((notion) => notion.Equation)
@@ -212,7 +232,6 @@ export const NotionPage: React.FC<types.PageProps> = ({
           collection: Collection,
           collectionRow: CollectionRow,
           modal: Modal,
-          pdf: Pdf,
           equation: Equation
         }}
         recordMap={recordMap}
