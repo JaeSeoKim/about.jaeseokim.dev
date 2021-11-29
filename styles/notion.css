@@ -18,7 +18,7 @@
 }
 
 .index-page {
-  --notion-max-width: 920px;
+  --notion-max-width: 720px;
 }
 
 .notion-text {
@@ -217,12 +217,6 @@
   opacity: 1;
 }
 
-.notion-link:hover {
-  border-width: 3px;
-  border-image: linear-gradient(90.68deg, #83eaf1 0.26%, #63a4ff 102.37%);
-  border-image-slice: 1;
-}
-
 .notion-red_background,
 .notion-pink_background,
 .notion-blue_background,
@@ -303,11 +297,6 @@
   background: transparent;
   box-shadow: inset 0 -1px 0 0 rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(4px);
-}
-
-.notion-bookmark:hover {
-  border-image: linear-gradient(90.68deg, #83eaf1 0.26%, #63a4ff 102.37%);
-  border-image-slice: 1;
 }
 
 .notion-collection-card .notion-property-multi_select-item {
