@@ -13,14 +13,6 @@ export const getStaticProps = async (
   const rawPageId = context.params.pageId
 
   try {
-    if (rawPageId === 'sitemap.xml' || rawPageId === 'robots.txt') {
-      return {
-        redirect: {
-          destination: `/api/${rawPageId}`
-        }
-      }
-    }
-
     const props = await resolveNotionPage(domain, rawPageId)
 
     return { props, revalidate: 60 * 60 * 3 }
