@@ -61,7 +61,7 @@ const socialLinks: SocialLink[] = [
     title: `Email <${config.author}>`,
     icon: (
       <svg
-        stroke-width='0'
+        strokeWidth='0'
         viewBox='0 0 1024 1024'
         xmlns='http://www.w3.org/2000/svg'
       >
@@ -75,7 +75,7 @@ const socialLinks: SocialLink[] = [
     title: `${config.author}'s blog`,
     icon: (
       <svg
-        stroke-width='0'
+        strokeWidth='0'
         viewBox='0 0 16 16'
         xmlns='http://www.w3.org/2000/svg'
       >

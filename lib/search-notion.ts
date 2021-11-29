@@ -5,7 +5,7 @@ import pMemoize from 'p-memoize'
 import { api } from './config'
 import * as types from './types'
 
-export const searchNotion = pMemoize(searchNotionImpl, { maxAge: 10000 })
+export const searchNotion = pMemoize(searchNotionImpl)
 
 async function searchNotionImpl(
   params: types.SearchParams
